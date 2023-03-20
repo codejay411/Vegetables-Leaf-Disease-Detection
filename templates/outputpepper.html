@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Vegetables disease detection</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="./static/css/owl.carousel.css">
+    <link rel="stylesheet" href="./static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./static/css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./static/css/templatemo-style.css">
+
+</head>
+
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="/" class="navbar-brand">Vegetables <span>.</span> Disease</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="/" class="smoothScroll">Home</a></li>
+                    <li><a href="/about" class="smoothScroll">About</a></li>
+                    <li><a href="/detection" class="smoothScroll">Detection</a></li>
+                    <li><a href="#" class="smoothScroll">Vegetables</a></li>
+                    <li><a href="/contact" class="smoothScroll">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="/logout" class="section-btn">Logout</a>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- detection -->
+    <section id="testimonial" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Detect Disease of vegetables</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <p>This application helps you to detect the vegetables having any type of disease or
+                                not by scanning plant leaves.</p>
+                            <div class="tst-author">
+                                <a href="{{ url_for('pepperbellreport', confidence=confidence, predicted_class = prediction) }}" class="section-btn btn btn-default smoothScroll">Generate Report</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="about-info">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>Our Result</h4>
+                            <h2 class="text-primary">Vegetable Name : {{veg}}</h2>
+                            <h2 class="text-primary">Predicted Vegetables Disease : {{prediction}}</h2>
+                            <h2 class="text-primary">Confidence : {{confidence}}</h2>
+
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="text-warning">Pepper Bell description</h2>
+                            <p>Bell peppers, Capsicum annuum are a cultivar group of annual or perennial plants in the
+                                family Solanaceae grown for their edible fruits. Bell pepper plants are short bushes
+                                with woody stems that grow brightly colored fruits. The alternating leaves are
+                                elliptical, smooth edged, and come to a distinct point. The plant produces white or
+                                purple bell-shaped flowers which are 2.5 cm (1 in) in diameter. Red, yellow, purple, or
+                                brown fruit are produced each season about 3-6 weeks after flowering. Pepper plants can
+                                grow 1 m (3.3 ft) tall and are usually grown as annuals in temperate regions for only
+                                one growing season. Bell pepper may be referred to as red pepper, yellow pepper or green
+                                pepper and is believed to have originated in Central and South America.</p>
+
+                            <h2 class="text-warning">About pepper bell disease</h2>
+                            <h4>Symptoms</h4>
+                            Water-soaked lesions that dry out and turn brown forming on the underside of the leaves;
+                            raised brown cankers on stems; cracked brown lesions on fruit.
+                            <h4>Cause</h4>
+                            Bacterium
+                            <h4>Comments</h4>
+                            Disease emergence favored by warm, wet conditions; the pathogen can be enter a field on seed
+                            and transplants and can be spread within a field by wind-driven rain, clipping plants and
+                            aerosols.
+                            <h4>Management</h4>
+                            Use disease free planting material; remove and destroy all crop debris after harvest, or
+                            plow material deeply under soil.
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 col-sm-12">
+                 <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                     <img src="./static/images/about-image.jpg" class="img-responsive" alt="">
+                 </div>
+             </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- FOOTER -->
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>HSR Layout, Bangalore, 560102</p>
+                                 <p>Bangalore</p>
+                            </address>
+                       </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Contacts</h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>+918887624847</p>
+                                 <p><a href="mailto:jaypr202@gmail.com">jaypr202@gmail.com</a></p>
+                                 <p>Bangalore</p>
+                            </address>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-8">
+                       <div class="footer-info footer-open-hour">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s"> Available Pages</h2>
+                            </div>
+                            <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>Home Page</p>
+                                 <p>About Page</p>
+                                 <p>Contact us Page</p>
+                                 <p>Detection Page</p>
+                                 
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-2 col-sm-4">
+                       <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                            <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="#" class="fa fa-google"></a></li>
+                       </ul>
+
+                       <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
+                            <p><br>Copyright &copy; 2023 <br>Jay prakash Bind 
+                            
+                            <br><br></p>
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+
+
+    <!-- SCRIPTS -->
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/jquery.stellar.min.js"></script>
+    <script src="./static/js/wow.min.js"></script>
+    <script src="./static/js/owl.carousel.min.js"></script>
+    <script src="./static/js/jquery.magnific-popup.min.js"></script>
+    <script src="./static/js/smoothscroll.js"></script>
+    <script src="./static/js/custom.js"></script>
+
+</body>
+
+</html>

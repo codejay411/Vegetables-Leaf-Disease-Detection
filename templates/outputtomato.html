@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Vegetables disease detection</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="./static/css/owl.carousel.css">
+    <link rel="stylesheet" href="./static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./static/css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./static/css/templatemo-style.css">
+
+</head>
+
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="/" class="navbar-brand">Vegetables <span>.</span> Disease</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="/" class="smoothScroll">Home</a></li>
+                    <li><a href="/about" class="smoothScroll">About</a></li>
+                    <li><a href="/detection" class="smoothScroll">Detection</a></li>
+                    <li><a href="#" class="smoothScroll">Vegetables</a></li>
+                    <li><a href="/contact" class="smoothScroll">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="/logout" class="section-btn">Logout</a>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- detection -->
+    <section id="testimonial" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <h2>Detect Disease of vegetables</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <p>This application helps you to detect the vegetables having any type of disease or
+                                not by scanning plant leaves.</p>
+                            <div class="tst-author">
+                                <a href="{{ url_for('tomatoreport', confidence=confidence, predicted_class = prediction) }}" class="section-btn btn btn-default smoothScroll">Generate Report</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="about-info">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>Our Result</h4>
+                            <h2 class="text-primary">Vegetable Name : {{veg}}</h2>
+                            <h2 class="text-primary">Predicted Vegetables Disease : {{prediction}}</h2>
+                            <h2 class="text-primary">Confidence : {{confidence}}</h2>
+
+                        </div>
+
+
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="text-warning">About tomato disease</h2>
+                            <h2 >Damage symptoms</h2>
+                            <ul>
+                                <li> Damping off of tomato occurs in two stages, i.e. the pre-emergence and the post-emergence
+                                    phase.</li>
+                                    <li>In the pre-emergence the phase the seedlings are killed just before they reach the soil
+                                        surface.</li>
+                                <li>The young radical and the plumule are killed and there is complete rotting of the seedlings.
+                                    The post-emergence phase is characterized by the infection of the young, juvenile tissues of
+                                    the collar at the ground level.</li>
+                                <li>The infected tissues become soft and water soaked. The seedlings topple over or collapse.</li>
+
+                            </ul>
+                            <h2 >Favourable conditions</h2>
+                            <ul>
+                                <li>High humidity, high soil moisture, cloudiness and low temperatures below 24° C for few days
+                                    are ideal for infection and development of disease.</li>
+                                <li>Crowded seedlings, dampness due to high rainfall, poor drainage and excess of soil solutes
+                                    hamper plant growth and increase the pathogenic damping-off.</li>
+                            </ul>
+                            <h2 >Survival and spread</h2>
+                            <ul>
+                                <li>Primary: Soil, Seed, Water</li>
+                                <li>Secondary: Conidia through rain splash or wind.</li>
+                            </ul>
+                            <h2 >Septoria leaf spot</h2>
+                            <h4 >Damage symptoms</h4>
+                            
+                            <ul>
+                                <li>Less vigorous plant are usually affected</li>
+                            <li>Small, round to irregular spots with a grey center and dark margin on leaves</li>
+                            <li>Spots usually start on lower leaves and gradually advance upwards</li>
+                            <li>Spots coalesce and leaves are blighted</li>
+                            <li>Complete defoliation of affected leaves</li>
+                            <li>Stems and flowers are sometimes attacked</li>
+                            <li>Fruits are rarely attacked</li>
+                            </ul>
+
+        
+                            <h4 >Survival and spread</h4>
+                            <ul>
+                            <li>Primary: Mycelium or conidia in pycnidia in infected plant debris or on solanaceous weeds</li>
+                            <li>Secondary: Conidia through rain splash or wind and also by slimy conidia sticking on to hands and clothing of tomato pickers</li>
+                        </ul>
+                            
+                            <h4>Favourable conditions</h4>
+                            <ul>
+                                <li>Poor vigour of plants due to nutrient inadequacy or in late season</li>
+                            <li>High humidity or persistent dew at 25 °C</li>
+                            <li>Moist weather with intermittent shower.</li>
+                            </ul>
+                            <h2>Bacterial stem and fruit canker</h2><hr>
+                            <h4>Damage symptoms</h4>
+                            <ul>
+                                <li>Disease appears as spots on leaves, stems and fruits and as wilting of leaves and shoots</li>
+                            <li>White blister like spots in the margins of leaves</li>
+                            <li>Spots become brown with age and coalesce, but leaves do not fall off</li>
+                            <li>Leaflets on one side of rachis show withering initially</li>
+                            <li>Light coloured streaks on stems and petioles at the joints</li>
+                            <li>Cracks develop in streaks and form cankers</li>
+                            <li>Slimy bacterial ooze through the cracks in humid weather</li>
+                            <li>Small, shallow, water soaked, spots with white halo develop on fruits</li>
+                            <li>The centers of spots become slightly raised, tan coloured and rough</li>
+                            <li>Vascular discolouration is seen in split open stems</li>
+                            </ul>
+                            
+                            <h4>Survival and spread</h4>
+                            <ul><li>Primary: Bacterial cells survive on infected plant debris and seed (both internally and
+                                externally) and also on solanaceous weeds such as Solanum nigrum</li>
+                                <li>Secondary: Bacterial cells transmitted through rain splash</li></ul>
+                            <h4>Favourable conditions</h4>
+                            <ul>
+                                <li>
+                                    Soil temperature of around 28 °C
+                                </li>
+                                <li>High humidity or persistent dew</li>
+                            <li>Moist weather with intermittent showers.</li>
+                            </ul>
+                            <h2>Early blight</h2><hr>
+                            <h4>Damage symptoms</h4>
+                            <ul>
+                                <li>This is a common disease of tomato occurring on the foliage at any stage of the growth.</li>
+                            <li>The fungus attacks the foliage causing characteristic leaf spots and blight. Early blight is
+                            first observed on the plants as small, black lesions mostly on the older foliage.</li>
+                            <li>Spots enlarge, and by the time they are one-fourth inch in diameter or larger, concentric
+                            rings in a bull's eye pattern can be seen in the center of the diseased area.</li>
+                            <li>Tissue surrounding the spots may turn yellow. If high temperature and humidity occur at this
+                            time, much of the foliage is killed.</li>
+                            <li>Lesions on the stems are similar to those on leaves, sometimes girdling the plant if they
+                            occur near the soil line.</li>
+                            <li>Transplants showing infection by the late blight fungus often die when set in the field. The
+                            fungus also infects the fruit, generally through the calyx or stem attachment.</li>
+                            <li>Lesions attain considerable size, usually involving nearly the entire fruit; concentric
+                            rings are also present on the fruit.</li>
+                            </ul>
+
+
+                            <h4>Survival and spread</h4>
+                            <ul>
+                                <li>Primary: The fungus spends the winter in infected plant debris in or on the soil where it
+                                    can survive at least one and perhaps several years. It can also be seed borne.</li>
+                                    <li>Secondary: The spores are transported by water, wind, insects, other animals including man,
+                                    and machinery. Once the initial infections have occurred, they become the most important
+                                    source of new spore production and are responsible for rapid disease spread.</li>
+                            </ul>
+                            <h4>Favourable conditions</h4>
+                            <ul>
+                                <li>Warm, rainy and wet weather</li>
+                            </ul>
+                            <h2>Bacterial leaf spot</h2><hr>
+                            <h4>Damage symptoms</h4>
+                            <ul>
+                                <li>Moist weather and splattering rains are conducive to disease development. Most outbreaks of
+                                    the disease can be traced back to heavy rainstorms that occur in the area.</li>
+                                    <li>Infected leaves show small, brown, water soaked, circular spots surrounded with yellowish
+                                    halo.</li>
+                                    <li>On older plants the leaflet infection is mostly on older leaves and may cause serious
+                                    defoliation.</li>
+                                    <li>The most striking symptoms are on the green fruit. Small, water-soaked spots first appear
+                                    which later become raised and enlarge until they are one-eighth to one-fourth inch in
+                                    diameter.</li>
+                                    <li>Centers of these lesions become irregular, light brown and slightly sunken with a rough,
+                                    scabby surface.</li>
+                                    <li>Ripe fruits are not susceptible to the disease. Surface of the seed becomes contaminated
+                                    with the bacteria, remaining on the seed surface for some time.</li>
+                                    <li>The organism survives in alternate hosts, on volunteer tomato plants and on infected plant
+                                    debris.</li>
+                            </ul>
+
+
+                            <h4>Survival and spread</h4>
+                            <ul>
+                                <li></li>Primary: Bacterial cells survive on infected plant debris and seed (both internally and
+                            externally) and also on solanaceous weeds such as Solanum nigrum</li>
+                            <li></li>Secondary: Bacterial cells transmitted through rain splash</li>
+                            </ul>
+                            <h4>Favourable conditions</h4>
+                            <ul>
+                                <li>Moist weather and splattering rains</li>
+                            <li>High humidity or persistent dew.</li>
+                            </ul>
+                            <h2>Bacterial wilt</h2><hr>
+                            Damage symptoms
+                            Characteristic symptoms of bacterial wilt are the rapid and complete wilting of normal grown
+                            up plants.
+                            Lower leaves may drop before wilting. Pathogen is mostly confined to vascular region; in
+                            advantage cases, it may invade the cortex and pith and cause yellow brown discolouration of
+                            tissues.
+                            Infected plant parts when cut and immersed in clear water, a white streak of bacterial ooze
+                            are seen coming out from cut ends.
+
+
+                            Survival and spread
+                            The spreads through wounds, soil and implements.
+                            Favourable conditions
+                            Relatively high soil moisture and to be checked.
+                            Leaf curlDamage symptoms
+                            Leaf curl disease is characterized by severe stunting of the plants with downward rolling
+                            and crinkling of the leaves. The newly emerging leaves exhibit slight yellow coloration and
+                            later they also show curling symptoms.
+                            Older leaves become leathery and brittle. The nodes and internodes are significantly reduced
+                            in size.
+                            The infected plants look pale and produce more lateral branches giving a bushy appearance.
+                            The infected plants remain stunted.
+                            Favourable conditions
+                            Whitefly is the vector for transmitting of leaf curl virus.
+                            MosaicDamage symptoms
+                            The disease is characterized by light and dark green mottling on the leaves often
+                            accompanied by wilting of young leaves in sunny days when plants first become infected.
+                            The leaflets of affected leaves are usually distorted, puckered and smaller than normal.
+                            Sometimes the leaflets become indented resulting in "fern leaf" symptoms.
+                            The affected plant appears stunted, pale green and spindly.
+
+
+                            Survival and spread
+                            The virus is spread by contact with clothes, hand of working labour, touching of infected
+                            plants with healthy ones, plant debris and implements.
+                            Tomato spotted wilt diseaseDamage symptoms
+                            Symptoms vary among hosts and in a single host species
+                            Stunting is a common symptom of TSWV infection
+                            Chlorotic or necrotic rings form on the leaves of many infected hosts
+                            Thickening of veins and bronzing of young leaves
+                            Growing tips may die-back and terminal branches may be streaked
+                            Affected plants may have a one sided growth habit or may be entirely stunted and have
+                            drooping leaves, suggesting a wilt
+                            Pale red or yellow areas with concentric circular marking in the normal red skin of ripe
+                            tomato are formed
+                            Discoloration of seed.
+
+
+                            Survival and spread
+                            Primary: Virus particles in infected plants of many hosts like Acanthospermum hispidum,
+                            Aster sp., Boerhaavia diffusa, Chrysanthemum sp., Cleome gynandra, cowpea, Dahlia
+                            variabilis, egg plant, French bean, Gerbera sp., groundnut, Lagasca mollis, lettuce,
+                            marigold, pea, chilli, pineapple, potato, Trianthema portulacastrum, water melon and Zinnia
+                            elegans
+                            Secondary: Virus particles transmitted by thrips, Frankliniella schultzii, Scirtothrips
+                            dorsalis.
+                            Fusarium wiltDamage symptoms
+                            The first symptom of the disease is clearing of the veinlets and chlorosis of the leaves.
+                            The younger leaves may die in succession and the entire may wilt and die in a course of few
+                            days. Soon the petiole and the leaves droop and wilt.
+                            In young plants, symptom consists of clearing of veinlet and dropping of petioles. In field,
+                            yellowing of the lower leaves first and affected leaflets wilt and die.
+                            The symptoms continue in subsequent leaves. At later stage, browning of vascular system
+                            occurs. Plants become stunted and die.
+
+
+                            Survival and spread
+                            Soil and implements
+                            Favourable conditions
+                            Relatively high soil moisture and soil temperature
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 col-sm-12">
+                 <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                     <img src="./static/images/about-image.jpg" class="img-responsive" alt="">
+                 </div>
+             </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- FOOTER -->
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>HSR Layout, Bangalore, 560102</p>
+                                 <p>Bangalore</p>
+                            </address>
+                       </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-8">
+                       <div class="footer-info">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Contacts</h2>
+                            </div>
+                            <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>+918887624847</p>
+                                 <p><a href="mailto:jaypr202@gmail.com">jaypr202@gmail.com</a></p>
+                                 <p>Bangalore</p>
+                            </address>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-8">
+                       <div class="footer-info footer-open-hour">
+                            <div class="section-title">
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s"> Available Pages</h2>
+                            </div>
+                            <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>Home Page</p>
+                                 <p>About Page</p>
+                                 <p>Contact us Page</p>
+                                 <p>Detection Page</p>
+                                 
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-2 col-sm-4">
+                       <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                            <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="#" class="fa fa-google"></a></li>
+                       </ul>
+
+                       <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
+                            <p><br>Copyright &copy; 2023 <br>Jay prakash Bind 
+                            
+                            <br><br></p>
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+
+
+    <!-- SCRIPTS -->
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/jquery.stellar.min.js"></script>
+    <script src="./static/js/wow.min.js"></script>
+    <script src="./static/js/owl.carousel.min.js"></script>
+    <script src="./static/js/jquery.magnific-popup.min.js"></script>
+    <script src="./static/js/smoothscroll.js"></script>
+    <script src="./static/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+*.log
+
+testing_dataset/
+Training/
+
+app - Copy.py
+.env

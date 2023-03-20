@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>Vegetables disease detection</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="./static/css/animate.css">
+     <link rel="stylesheet" href="./static/css/owl.carousel.css">
+     <link rel="stylesheet" href="./static/css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="./static/css/magnific-popup.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="./static/css/templatemo-style.css">
+
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="/" class="navbar-brand">Vegetables <span>.</span> Disease</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="/" class="smoothScroll">Home</a></li>
+                         <li><a href="/about" class="smoothScroll">About</a></li>
+                         <li><a href="/detection" class="smoothScroll">Detection</a></li>
+                         <li><a href="#" class="smoothScroll">Vegetables</a></li>
+                         <li><a href="/contact" class="smoothScroll">Contact</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                         <a href="/logout" class="section-btn">Logout</a>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- detection -->
+     <section id="testimonial" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Detect Disease of vegetables</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                         <div class="owl-carousel owl-theme">
+                              <div class="item">
+                                   <p>This application helps you to detect the vegetables having any type of disease or
+                                        not by scanning plant leaves.</p>
+                                   <div class="tst-author">
+                                        <a href="{{ url_for('potatoreport', confidence=confidence, predicted_class = prediction) }}" class="section-btn btn btn-default smoothScroll">Generate Report</a>
+                                   </div>
+                              </div>
+
+
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="about-info">
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                                   <h4>Our Result</h4>
+                                   <h2 class="text-primary">Vegetable Name : {{veg}}</h2>
+                                   <h2 class="text-primary">Predicted Vegetables Disease : {{prediction}}</h2>
+                                   <h2 class="text-primary">Confidence : {{confidence}}</h2>
+
+                              </div>
+          
+
+                              <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2 class="text-warning">About Potato disease</h2>
+                                   <ul>
+                                        <li>The symptoms of bacterial wilt infection can be seen on all parts of
+                                             infected
+                                             plants.</li>
+                                        <li>Infected plant begins to wilt, starting from the tips of the leaves or where
+                                             the
+                                             stems branch out, and then spreading to all parts of the plant.</li>
+                                        <li>Leaves become yellow at their bases, then the whole plant wilts and dies.
+                                             When
+                                             stems are cut a brown colored ring will be visible.</li>
+                                        <li>When a tuber is cut in half, black or brown rings will, however, be visible.
+                                             If
+                                             left for a while or squeezed, these rings will exude a thick white fluid.
+                                        </li>
+
+                                        <li>A further symptom is fluid coming out of tuber eyes. This can be signified
+                                             by
+                                             soil sticking to tuber eyes when crops are harvested. Serious infection
+                                             causes
+                                             tubers to rot.</li>
+
+                                   </ul>
+                                   <h2 class="text-warning">Late blight</h2>
+                                   <h4>Disease symptoms:</h4>
+                                   <ul>
+                                        <li>This disease damages leaves, stems and tubers. Affected leaves appear blistered
+                                             as if scalded by hot water and eventually rot and dry out.</li>
+                                        <li>When drying out, leaves turn brown or black in color. When infections are still
+                                             active, spots appear on the underside of leaves blanketed in what looks like
+                                             flour.</li>
+                                        <li>Affected stems begin to blacken from their tips, and eventually dry out.
+                                             </li>
+                                        <li>Severe infections cause all foliage to rot, dry out and fall to the ground,
+                                             stems to dry out and plants to die.</li>
+                                        <li>Affected tubers display dry brown-colored spots on their skins and flesh. This
+                                             disease acts very quickly. If it is not controlled, infected plants will die
+                                             within two or three days.</li>
+                                        
+                                        
+                                   </ul>
+                                   <h4>Favourable condition:</h4>
+                                   <ul>
+                                        <li>High humidity
+                                             
+                                             </li>
+                                        <li>Low temperature and leaf wetness</li>
+                         
+                                        
+                                        
+                                   </ul>
+                                   <h2 class="text-warning">Early blight</h2>
+                                   <h4>Disease symptoms:</h4>
+                                   <ul>
+                                        <li>This is a common disease of potato occurring on the foliage at any stage of the growth and causes characteristic leaf spots and blight.</li>
+                                             <li>Normally the disease symptoms become apparent during tuber bulking stage and develop leading to the harvest.</li>
+                                             <li>The early blight is first observed on the plants as small, black lesions mostly on the older foliage.</li>
+                                             <li>Spots enlarge, and by the time they are one-fourth inch in diameter or larger, concentric rings in a bull's eye pattern can be seen in the center of the diseased area.</li>
+                                             <li>Tissue surrounding the spots may turn yellow. If high temperature and humidity occur at this time, much of the foliage is killed.</li>
+                                             <li>Lesions on the stems are similar to those on leaves, sometimes girdling the plant if they occur near the soil line.</li>
+                                             
+                                             
+                                        
+                                        
+                                   </ul>
+                                   <h4>Favourable condition:</h4>
+                                   <ul>
+                                        <li>Warm, rainy and wet weather
+                                             </li>
+ 
+                         
+                                        
+                                        
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- <div class="col-md-6 col-sm-12">
+                 <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                     <img src="./static/images/about-image.jpg" class="img-responsive" alt="">
+                 </div>
+             </div> -->
+
+               </div>
+          </div>
+     </section>
+
+
+
+
+
+     <!-- FOOTER -->
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-3 col-sm-8">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
+                              </div>
+                              <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>HSR Layout, Bangalore, 560102</p>
+                                   <p>Bangalore</p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-8">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Contacts</h2>
+                              </div>
+                              <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>+918887624847</p>
+                                   <p><a href="mailto:jaypr202@gmail.com">jaypr202@gmail.com</a></p>
+                                   <p>Bangalore</p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-8">
+                         <div class="footer-info footer-open-hour">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s"> Available Pages</h2>
+                              </div>
+                              <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>Home Page</p>
+                                   <p>About Page</p>
+                                   <p>Contact us Page</p>
+                                   <p>Detection Page</p>
+                                   
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4">
+                         <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                              <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                              <li><a href="#" class="fa fa-twitter"></a></li>
+                              <li><a href="#" class="fa fa-instagram"></a></li>
+                              <li><a href="#" class="fa fa-google"></a></li>
+                         </ul>
+
+                         <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
+                              <p><br>Copyright &copy; 2023 <br>Jay prakash Bind 
+                              
+                              <br><br></p>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="./static/js/jquery.js"></script>
+     <script src="./static/js/bootstrap.min.js"></script>
+     <script src="./static/js/jquery.stellar.min.js"></script>
+     <script src="./static/js/wow.min.js"></script>
+     <script src="./static/js/owl.carousel.min.js"></script>
+     <script src="./static/js/jquery.magnific-popup.min.js"></script>
+     <script src="./static/js/smoothscroll.js"></script>
+     <script src="./static/js/custom.js"></script>
+
+</body>
+
+</html>
