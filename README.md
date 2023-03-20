@@ -44,4 +44,4 @@ python app.py
 ```
 ## Home Proejct
 
-![Test Image 1](https://github.com/codejay411/Vegetables-disease-detection/blob/main/homepage.png)
+![Test Image 1](https://github.com/codejay411/Vegetables-Leaf-Disease-Detection/blob/main/homepage.png)
